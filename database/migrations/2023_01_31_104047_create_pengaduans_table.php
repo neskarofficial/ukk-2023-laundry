@@ -15,7 +15,7 @@ class CreatePengaduansTable extends Migration
     {
         Schema::create('pengaduans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('users_id')->constrained('users');
+            $table->foreignId('users_id')->constrained('users');    
             $table->date('tanggal_pengaduan');
             $table->text('isi_laporan');
             $table->string('foto', 255);
